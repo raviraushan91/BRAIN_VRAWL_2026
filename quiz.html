@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Brain Brawl 2026 | Quiz</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="css/quiz.css">
+</head>
+
+
+<body>
+
+
+<!-- ======================================
+     START / INSTRUCTION SCREEN
+======================================= -->
+
+<div id="startScreen"
+     class="start-screen">
+
+    <div class="start-card">
+
+        <div class="start-badge">
+            BRAIN BRAWL 2026
+        </div>
+
+
+        <h1>
+            Ready to Begin?
+        </h1>
+
+
+        <p class="start-subtitle">
+            Select your academic year and read
+            the instructions carefully before
+            starting the test.
+        </p>
+
+
+
+        <!-- YEAR -->
+
+        <div class="year-selection">
+
+            <label for="studentYear">
+                Select Your Year
+            </label>
+
+
+            <select id="studentYear">
+
+                <option value="">
+                    Select Year
+                </option>
+
+                <option value="1">
+                    1st Year
+                </option>
+
+                <option value="2">
+                    2nd Year
+                </option>
+
+                <option value="3">
+                    3rd Year
+                </option>
+
+                <option value="4">
+                    4th Year
+                </option>
+
+            </select>
+
+
+            <p id="yearError"
+               class="error-message">
+            </p>
+
+        </div>
+
+
+
+        <!-- INSTRUCTIONS -->
+
+        <div class="instructions">
+
+
+            <div class="instruction-item">
+
+                <span>01</span>
+
+                <p>
+                    This test contains
+                    <strong>75 questions</strong>.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>02</span>
+
+                <p>
+                    Total marks are
+                    <strong>100</strong>.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>03</span>
+
+                <p>
+                    Total time allowed is
+                    <strong>60 minutes</strong>.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>04</span>
+
+                <p>
+                    Clicking Start Test will
+                    activate
+                    <strong>fullscreen mode</strong>.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>05</span>
+
+                <p>
+                    Switching to another browser
+                    tab counts as a violation.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>06</span>
+
+                <p>
+                    Exiting fullscreen mode counts
+                    as a violation.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>07</span>
+
+                <p>
+                    <strong>3 violations</strong>
+                    will automatically disqualify
+                    the participant.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>08</span>
+
+                <p>
+                    No marks will be deducted for
+                    wrong answers.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>09</span>
+
+                <p>
+                    You can move between questions
+                    using the navigation buttons.
+                </p>
+
+            </div>
+
+
+
+            <div class="instruction-item">
+
+                <span>10</span>
+
+                <p>
+                    Your score will not be shown
+                    after submission. Contact the
+                    administrator for the result.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="start-warning">
+
+            Once you click
+            <strong>Start Test</strong>,
+            the timer and security monitoring
+            will begin.
+
+        </div>
+
+
+
+        <!-- START BUTTON -->
+
+        <button id="startTestBtn"
+                class="start-test-btn"
+                type="button">
+
+            Start Test →
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ======================================
+     QUIZ SCREEN
+======================================= -->
+
+<div id="quizContainer"
+     class="quiz-wrapper"
+     style="display:none;">
+
+
+
+    <!-- ==================================
+         TOP BAR
+    =================================== -->
+
+    <header class="quiz-topbar">
+
+
+        <!-- BRAND -->
+
+        <div class="quiz-brand">
+
+            <h2>
+                BRAIN
+                <span>BRAWL</span>
+            </h2>
+
+            <p>
+                Academic Quiz Competition
+            </p>
+
+        </div>
+
+
+
+        <!-- QUIZ INFO -->
+
+        <div class="quiz-info">
+
+
+            <!-- TIMER -->
+
+            <div class="timer-box">
+
+                <small>
+                    TIME
+                </small>
+
+                <strong id="timer">
+                    60:00
+                </strong>
+
+            </div>
+
+
+
+            <!-- VIOLATIONS -->
+
+            <div class="violation-box">
+
+                <small>
+                    VIOLATIONS
+                </small>
+
+                <strong id="violationCount">
+                    0/3
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- ==================================
+         MAIN QUIZ
+    =================================== -->
+
+    <main class="quiz-container">
+
+
+
+        <!-- =================================
+             QUESTION SECTION
+        ================================== -->
+
+        <section class="question-section">
+
+
+            <div class="question-card">
+
+
+                <!-- QUESTION HEADER -->
+
+                <div class="question-header">
+
+
+                    <span id="questionNumber">
+                        Question 1 of 75
+                    </span>
+
+
+                    <span id="progressText">
+                        0/75 Attempted
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- QUESTION CONTENT -->
+
+                <div class="question-content">
+
+
+                    <h1 id="questionText">
+
+                        Loading question...
+
+                    </h1>
+
+
+
+                    <!-- OPTIONS -->
+
+                    <div id="optionsContainer"
+                         class="options-container">
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- NAVIGATION -->
+
+                <div class="quiz-navigation">
+
+
+                    <button id="previousBtn"
+                            class="nav-btn"
+                            type="button">
+
+                        ← Previous
+
+                    </button>
+
+
+
+                    <button id="nextBtn"
+                            class="nav-btn primary"
+                            type="button">
+
+                        Next →
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="question-sidebar">
+
+
+            <div class="sidebar-card">
+
+
+                <h3>
+                    Questions
+                </h3>
+
+
+                <p class="sidebar-info">
+                    Select a question
+                </p>
+
+
+
+                <!-- QUESTION GRID -->
+
+                <div id="questionGrid"
+                     class="question-grid">
+
+                </div>
+
+
+
+                <!-- LEGEND -->
+
+                <div class="legend">
+
+
+                    <div>
+
+                        <span class="legend-box">
+                        </span>
+
+                        Unanswered
+
+                    </div>
+
+
+
+                    <div>
+
+                        <span class="legend-box answered">
+                        </span>
+
+                        Answered
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button id="submitBtn"
+                        class="submit-btn"
+                        type="button">
+
+                    Submit Quiz
+
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ======================================
+     WARNING MODAL
+======================================= -->
+
+<div id="warningModal"
+     class="modal">
+
+
+    <div class="modal-content">
+
+
+        <h2>
+            Warning
+        </h2>
+
+
+        <p id="warningMessage">
+
+            Violation detected.
+
+        </p>
+
+
+        <button id="warningCloseBtn"
+                type="button">
+
+            Continue Quiz
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ======================================
+     DISQUALIFICATION MODAL
+======================================= -->
+
+<div id="disqualificationModal"
+     class="modal">
+
+
+    <div class="modal-content danger">
+
+
+        <h2>
+            Quiz Disqualified
+        </h2>
+
+
+        <p>
+
+            You have reached the maximum
+            number of security violations.
+
+            Your quiz has been automatically
+            submitted.
+
+        </p>
+
+
+        <button id="disqualificationBtn"
+                type="button">
+
+            Close
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ======================================
+     JAVASCRIPT
+======================================= -->
+
+<script type="module"
+        src="js/quiz.js">
+</script>
+
+
+<script type="module"
+        src="js/security.js">
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Brain Brawl 2026 | Student Login</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+    </div>
+
+
+    <main class="page-container">
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="logo">
+                B
+            </div>
+
+            <div>
+
+                <h1>
+                    BRAIN <span>BRAWL</span>
+                </h1>
+
+                <p>
+                    College Quiz Competition • 2026
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOGIN CARD -->
+
+        <section class="glass-card login-card">
+
+            <div class="card-heading">
+
+                <span class="badge">
+                    STUDENT PORTAL
+                </span>
+
+                <h2>
+                    Welcome, Participant
+                </h2>
+
+                <p>
+                    Enter your registered details
+                    to continue.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label for="studentName">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your full name"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Example: RAHU2005"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="password-info">
+
+                    <span>ⓘ</span>
+
+                    Password format:
+                    First 4 letters of your name
+                    in CAPITAL + DOB year.
+
+                    <br>
+
+                    Example:
+                    <strong>RAHU2005</strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+
+                    <span>
+                        Continue
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <p
+                    id="loginError"
+                    class="error-message"
+                ></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <div class="competition-info">
+
+            <span>
+                75 Questions
+            </span>
+
+            <span>•</span>
+
+            <span>
+                100 Marks
+            </span>
+
+            <span>•</span>
+
+            <span>
+                60 Minutes
+            </span>
+
+        </div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="js/login.js"
+    ></script>
+
+</body>
+
+</html>

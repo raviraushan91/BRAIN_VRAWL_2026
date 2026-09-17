@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Brain Brawl 2026 | Admin Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="background">
+
+    <div class="orb orb-one"></div>
+
+    <div class="orb orb-two"></div>
+
+</div>
+
+
+<main class="admin-container">
+
+
+    <!-- ========================================
+         HEADER
+    ======================================== -->
+
+    <header class="admin-header">
+
+
+        <div class="brand">
+
+
+            <div class="logo">
+                B
+            </div>
+
+
+            <div>
+
+                <h1>
+                    BRAIN <span>BRAWL</span>
+                </h1>
+
+                <p>
+                    Live Competition Control Center
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="connection">
+
+
+            <span
+                id="connectionDot"
+                class="connection-dot"
+            ></span>
+
+
+            <span id="connectionText">
+                Connecting...
+            </span>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- ========================================
+         STATISTICS
+    ======================================== -->
+
+    <section class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <p>
+                Total Students
+            </p>
+
+            <h2 id="totalStudents">
+                0
+            </h2>
+
+            <span>
+                Participants
+            </span>
+
+        </div>
+
+
+        <div class="stat-card active-card">
+
+            <p>
+                Active
+            </p>
+
+            <h2 id="activeStudents">
+                0
+            </h2>
+
+            <span>
+                Currently attempting
+            </span>
+
+        </div>
+
+
+        <div class="stat-card submitted-card">
+
+            <p>
+                Submitted
+            </p>
+
+            <h2 id="submittedStudents">
+                0
+            </h2>
+
+            <span>
+                Quiz completed
+            </span>
+
+        </div>
+
+
+        <div class="stat-card danger-card">
+
+            <p>
+                Disqualified
+            </p>
+
+            <h2 id="disqualifiedStudents">
+                0
+            </h2>
+
+            <span>
+                3 violations
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         LIVE MONITOR
+    ======================================== -->
+
+    <section class="dashboard-card">
+
+
+        <div class="dashboard-header">
+
+
+            <div>
+
+                <span class="badge">
+                    LIVE MONITOR
+                </span>
+
+                <h2>
+                    Student Activity
+                </h2>
+
+            </div>
+
+
+            <div class="live">
+
+                <span></span>
+
+                LIVE
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="table-container">
+
+
+            <table>
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            RANK
+                        </th>
+
+                        <th>
+                            STUDENT ID
+                        </th>
+
+                        <th>
+                            STUDENT
+                        </th>
+
+                        <th>
+                            YEAR
+                        </th>
+
+                        <th>
+                            PROGRESS
+                        </th>
+
+                        <th>
+                            SCORE
+                        </th>
+
+                        <th>
+                            TIME LEFT
+                        </th>
+
+                        <th>
+                            VIOLATIONS
+                        </th>
+
+                        <th>
+                            STATUS
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="studentTable">
+
+                    <tr>
+
+                        <td
+                            colspan="9"
+                            class="empty"
+                        >
+
+                            No students are currently
+                            participating.
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script
+    type="module"
+    src="js/admin.js"
+></script>
+
+
+</body>
+
+</html>
